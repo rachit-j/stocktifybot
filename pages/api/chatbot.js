@@ -7,7 +7,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:4000'); // Allow only this origin
+  res.setHeader('Access-Control-Allow-Origin', '*' ); // Allow only this origin
   res.setHeader('Access-Control-Allow-Methods', 'POST'); // Allow only POST method
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow only Content-Type header
 
