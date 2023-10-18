@@ -5,12 +5,12 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:4000'); // Allow only this origin
-res.setHeader('Access-Control-Allow-Methods', 'POST'); // Allow only POST method
-res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow only Content-Type header
-
-
 export default async function (req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:4000'); // Allow only this origin
+  res.setHeader('Access-Control-Allow-Methods', 'POST'); // Allow only POST method
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow only Content-Type header
+
   if (!configuration.apiKey) {
     return res.status(500).json({
       error: {
