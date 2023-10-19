@@ -1,13 +1,35 @@
 {
     "headers": [
       {
-        "source": "/(.*)",
+        "source": "/api/(.*)",
         "headers": [
           {
-            "key": "access-control-allow-origin",
+            "key": "Access-Control-Allow-Origin",
             "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET, POST, OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type, Authorization"
           }
         ]
       }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "methods": ["OPTIONS"],
+        "dest": "/api/$1",
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        },
+        "status": 200
+      }
     ]
   }
+  
