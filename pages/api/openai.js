@@ -1,5 +1,3 @@
-import { Configuration, OpenAIApi, CreateCompletionRequest } from "@openai/client";
-
 const OpenAIApi = require("openai");
 
 const openai = new OpenAIApi({
