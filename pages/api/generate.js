@@ -19,10 +19,6 @@ const allowCors = fn => async (req, res) => {
   return await fn(req, res)
 }
 
-// Handle OPTIONS request (preflight)
-if (req.method === 'OPTIONS') {
-  return res.status(200).end();
-}
 
 
 const handler = (req, res) => {
