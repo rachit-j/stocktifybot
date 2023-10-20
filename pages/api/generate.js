@@ -1,5 +1,5 @@
 import { Configuration, OpenAIApi } from "openai";
-
+ // fixed
 
 
 const allowCors = fn => async (req, res) => {
