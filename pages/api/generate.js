@@ -6,6 +6,17 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow any origin
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); // Allow POST and OPTIONS methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow Content-Type header
+
+  // Handle pre-flight request. Don't run the rest of the method body if this is a pre-flight request.
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
   if (!configuration.apiKey) {
     res.status(500).json({
       error: {
