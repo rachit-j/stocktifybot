@@ -55,7 +55,7 @@ export default function Home() {
           <input
             type="text"
             name="aigf"
-            placeholder="Start Talking"
+            placeholder="Start Talking..."
             value={aigfInput}
             onChange={(e) => setaigfInput(e.target.value)}
           />
