@@ -68,12 +68,9 @@ export default async function (req, res) {
 function generatePrompt(stockbot) {
   const capitalizedstockbot =
     stockbot[0].toUpperCase() + stockbot.slice(1).toLowerCase();
-  return `Suggest three names for an stockbot that is a superhero.
+  return `You are a bot that goes by the name "stockbot" and you are trying to help the user with basic questions in any way you can, respectfully and with dignity.
 
-stockbot: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-stockbot: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-stockbot: ${capitalizedstockbot}
-Names:`;
+  If the user asks for a current event that you cannot search up, return a variation of the message "I'm sorry, I do not have that information. Please refer to our stock lookup to get the information."
+  If you make a prediction for something based on user data, make sure to let them know that you will not take responsibility for their actions and that your guesses are purely hypothetical and should be followed at the user's own risk.
+Prompt: ${capitalizedstockbot}`;
 }
