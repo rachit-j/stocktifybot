@@ -35,7 +35,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Stocktify Backend</title>
-        <link rel="icon" href="/dog.png" />
+        <link rel="icon" href="/stocktify_logo.png" />
       </Head>
 
       <main className={styles.main}>
