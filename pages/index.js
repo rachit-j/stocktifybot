@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
+        <img src="/stocktify_logo.png" className={styles.icon} />
         <h3>Talk to Stockbot DIRECT</h3>
         <p>This site is not availible to be accessed by the public and is intended for demonstration and development purposes. If you are not authorized to be on this site, proceed with caution.</p>
         <form onSubmit={onSubmit}>
