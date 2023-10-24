@@ -30,7 +30,7 @@ StocktifyBot is a backend service designed to power the interactions for the [St
    $ npm install
    ```
 
-5. Make a copy of the example environment variables file
+5. Make a environment variables file
 
    On Linux systems: 
    ```bash
